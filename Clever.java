@@ -3,6 +3,11 @@ import org.apache.http.client.HttpClient;
 import org.apache.http.client.fluent.Request;
 import org.apache.http.entity.ContentType;
 
+// import org.json.simple.JSONObject;
+// import org.json.simple.JSONArray;
+// import org.json.simple.parser.ParseException;
+// import org.json.simple.parser.JSONParser;
+
 import java.io.*;
 
 public class Clever {
@@ -13,7 +18,8 @@ public class Clever {
                      .addHeader("Authorization", "Bearer DEMO_TOKEN")
                      .execute().returnContent().asString();
 		
-			System.out.println(body);
+			//System.out.println(body);
+			//String jsonEX = {"balance": 1000.21, "num":100, "is_vip":true, "name":"foo"}
 
 		} catch (IOException e) {
 		    e.printStackTrace();
