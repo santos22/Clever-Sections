@@ -23,7 +23,11 @@ public class Clever {
 
 			JSONObject jsonObject = (JSONObject) parser.parse(body);
 
-			JSONArray response = (JSONArray) jsonObject.get("data");
+			JSONObject structure = (JSONObject) jsonObject.get("paging");
+			System.out.println("Total " + structure.get("total"));
+			System.out.println("Count " + structure.get("count"));
+
+			JSONArray response = (JSONArray) jsonObject.get("links");
 
 			for(int i = 0; i < response.size(); i ++)
 			{
@@ -45,4 +49,4 @@ public class Clever {
 // commands to run
 // javac -cp \* Clever.java
 // java -cp .:\* Clever
-// http://examples.javacodegeeks.com/core-java/json/java-json-parser-example/
+// http://examples.javacodegeeks.com/core-java/json/java-json-parser-example/ *** GOD BLESS THIS PERSON ***
