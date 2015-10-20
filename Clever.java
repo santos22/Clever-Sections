@@ -12,15 +12,21 @@ public class Clever {
 
 	public static void main(String[] args) {
 		try {
+			// access Clever Data API and get a list (JSON response) of sections
 		    String body = Request.Get("https://api.clever.com/v1.1/sections")
                      .addHeader("Authorization", "Bearer DEMO_TOKEN")
                      .execute().returnContent().asString();
 		
+			// create instance of JSONParser to parse response
 			JSONParser parser = new JSONParser();
 
+			// JSONObject contains a collection of key-value pairs
 			JSONObject jsonObject = (JSONObject) parser.parse(body);
 
+			// retrieve Paging object
 			JSONObject sections = (JSONObject) jsonObject.get("paging");
+
+			// retrieve values we want from Paging object
 			String totalSections = sections.get("total").toString();
 			String totalStudents = sections.get("count").toString();
 
@@ -39,7 +45,7 @@ public class Clever {
 		} catch (IOException e) {
 		    e.printStackTrace();
 		} catch(ParseException pe){
-		    System.out.println("position: " + pe.getPosition());
+		    System.out.println("Position: " + pe.getPosition());
 		    System.out.println(pe);
 		}
 	}
