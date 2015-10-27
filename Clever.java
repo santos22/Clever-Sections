@@ -39,6 +39,11 @@ public class Clever {
 			System.out.println("Total sections: " + numberOfSections);
 			System.out.println("Total students: " + numberOfStudents);
 
+			// As of 2:28 PM on Tuesday, October 27, 2015 (CDT) 
+			// Total sections: 4
+			// Total students: 379.0
+			// Average number of students per section: 94.75
+
 			// average number of students per section
 			System.out.println("Average number of students per section: " + average);
 
