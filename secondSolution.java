@@ -48,6 +48,11 @@ public class secondSolution {
 			// average number of students per section
 			System.out.println("Average: " + totalStudents/totalSections);
 
+			// As of 2:30 PM on Tuesday, October 27, 2015 (CDT) 
+			// Total sections: 6
+			// Total students: 2180.0
+			// Average: 363.3333333333333
+
 		} catch (IOException e) {
 		    e.printStackTrace();
 		} catch(ParseException pe){
